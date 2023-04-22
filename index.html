@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+        <script src="https://code.iconify.design/iconify-icon/1.0.0-beta.3/iconify-icon.min.js"></script>
+        <link rel="stylesheet" href="./style.css">
+        <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+        <title>Web Calculator</title>
+    </head>
+    <body>
+
+        <!-- This code is written by Joydev Gorai...  -->
+        <!-- <center> -->
+            <iconify-icon icon="entypo:info-with-circle" width="30" height="30" id="icon" onclick="infobtn()"></iconify-icon>
+            <div class="daynight">
+                <input type="checkbox" class="checkbox" id="checkbox">
+                <label for="checkbox" class="label">
+                    <iconify-icon icon="material-symbols:bedtime-rounded" id="day"></iconify-icon>
+                    <iconify-icon icon="material-symbols:wb-sunny-rounded" id="night"></iconify-icon>
+                    <div class="ball"></div>
+                </label>
+            </div>
+            <p id="mode_text">Change Mode</p>
+            
+            <div class="calculator_body">
+        <!-- <div id="displaybox"> -->
+            <!-- <p id="displaybox"> -->
+                <br><br>
+                <form name="from">
+                    <input type="text" name="result" id="displaybox" maxlength="19" minlength="0" readonly>  
+
+                    <!-- it should not take input from user , it only take input from calculator only -->
+
+                </form>
+            <!-- </p> -->
+        <!-- </div> -->
+        <div class="switch1">
+
+            <!-- <button id="btn_1" onclick="btn1()" onmousedown="setAttribute('style','color:var( --light_designcolor);');" onmouseup="normaleffect('btn_1')">1</button> -->
+            <button id="btn_1" onclick="btn1()" onmousedown="designeffect('btn_1')" onmouseup="normaleffect('btn_1')">1</button>
+            <button id="btn_2" onclick="btn2()"  onmousedown="designeffect('btn_2')" onmouseup="normaleffect('btn_2')">2</button>
+            <button id="btn_3" onclick="btn3()" onmousedown="designeffect('btn_3')" onmouseup="normaleffect('btn_3')">3</button>
+            <button id="btn_plus" onclick="plus()" onmousedown="designeffect('btn_plus')" onmouseup="normaleffect('btn_plus')">+</button>
+        </div>    
+        <div class="switch2">    
+            <button id="btn_4" onclick="btn4()" onmousedown="designeffect('btn_4')" onmouseup="normaleffect('btn_4')">4</button>
+            <button id="btn_5" onclick="btn5()" onmousedown="designeffect('btn_5')" onmouseup="normaleffect('btn_5')">5</button>̥
+            <button id="btn_6" onclick="btn6()" onmousedown="designeffect('btn_6')" onmouseup="normaleffect('btn_6')">6</button>
+            <button id="btn_minus" onclick="minus()" onmousedown="designeffect('btn_minus')" onmouseup="normaleffect('btn_minus')">-</button>
+        </div>
+        <div class="switch3">            
+            <button id="btn_7" onclick="btn7()" onmousedown="designeffect('btn_7')" onmouseup="normaleffect('btn_7')">7</button>
+            <button id="btn_8" onclick="btn8()" onmousedown="designeffect('btn_8')" onmouseup="normaleffect('btn_8')">8</button>
+            <button id="btn_9" onclick="btn9()" onmousedown="designeffect('btn_9')" onmouseup="normaleffect('btn_9')">9</button>
+            <button id="btn_multiply" onclick="multiply()" onmousedown="designeffect('btn_multiply')" onmouseup="normaleffect('btn_multiply')">*</button>
+        </div>
+        <div class="switch4"> 
+            <button id="btn_div" onclick="div()" onmousedown="designeffect('btn_div')" onmouseup="normaleffect('btn_div')">/</button>
+            <button id="btn_0" onclick="btn0()" onmousedown="designeffect('btn_0')" onmouseup="normaleffect('btn_0')">0</button>
+            <button id="btn_dot" onclick="btndot()" onmousedown="designeffect('btn_dot')" onmouseup="normaleffect('btn_dot')">.</button>   
+            <button id="btn_equal" onclick="inputvalid()" onmousedown="designeffect('btn_equal')" onmouseup="normaleffect('btn_equal')" >=</button>
+        </div>
+
+        <div class="switch5"> 
+            <button id="btn_clear" onclick="clearsc()" onmousedown="designeffect('btn_clear')" onmouseup="normaleffect('btn_clear')">C</button>
+            <button id="btn_clearall" onclick="clearall()" onmousedown="designeffect('btn_clearall')" onmouseup="normaleffect('btn_clearall')">AC</button>
+        </div>
+    </div>
+    <br><br>
+    <!-- <iconify-icon icon="entypo:info-with-circle" width="30" height="30" id="icon" onclick="infobtn()"></iconify-icon> -->
+    
+    <!-- </center> -->
+    <script src="./calculator.js"></script>
+</body>
+</html>
+
+
+

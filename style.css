@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&family=Graduate&family=Iceland&family=Merriweather:wght@300&family=Noto+Sans+Symbols&display=swap');
+
+
+/* this code is written by Joydev Gorai... */
+
+:root{
+    --light_body: rgb(36 117 151);
+    --light_btn: rgb(14 46 149);
+    --light_display: rgb(155 194 189);
+    --light_bg: rgb(154, 154, 154);
+    --light_boxshadow: rgb(16 0 198);
+    --light_btnboxshadow: rgb(188 20 20);
+    --light_textcolor: rgb(198 168 21);
+    --light_modetext: rgb(24 4 4);
+    --light_textshadow: rgb(11 18 15);
+    --light_inputtext: rgb(0 0 0 / 62%);
+    --light_designcolor: rgb(162 66 23);
+    --light_infobtn: #03544f46;
+    --light_infobtnshadow: #45050540;
+    --dark_infobtn: #03544f;
+    --dark_infobtnshadow: #450505;
+
+
+}
+
+
+.dark{
+    --light_body: rgb(0 0 0);
+    --light_btn: rgb(20 35 50);
+    --light_display: rgb(141, 116, 191);
+    --light_bg: rgb(37, 36, 36);
+    --light_boxshadow: rgb(151 151 139);
+    --light_btnboxshadow: rgb(167 168 180);
+    --light_textcolor:rgb(164 163 178);
+    --light_modetext:rgb(192 163 22);
+    --light_textshadow:rgb(0 0 0);
+    --light_inputtext:rgb(3 0 58 / 84%);
+    --light_designcolor:rgb(49 230 218);
+    --light_infobtn:#54474724;
+    --light_infobtnshadow:#b2a4a439;
+    --dark_infobtn:#544747;
+    --dark_infobtnshadow:#b2a4a4;
+}
+
+
+body{
+    background: var(--light_bg);
+    transition: background 1s linear;
+}
+
+
+.calculator_body{
+    width:35%;
+    margin:auto;
+    margin-top: 3.5%;
+    border-radius: 30px;
+    background-color: var(--light_body);
+    box-shadow: 2px 2px 20px var(--light_boxshadow) ;
+    transition: background 0.5s linear;
+    /* position: absolute; */
+}
+
+#displaybox {
+    width:90%;
+    height: 8vh;
+    background-color: var(--light_display);
+    margin-left: 4%;
+    border-radius: 30px;
+    font-size: 5.6vh;
+    color: var(--light_inputtext);
+    font-family: "Bookman Old Style",Courier, monospace;
+    text-align: right;
+}
+
+.switch1,.switch2,.switch3,.switch4{
+    display:flex;
+    justify-content: space-between;
+    width: 98%;
+}
+
+#btn_1,#btn_2,#btn_3,#btn_4,#btn_5,#btn_6,#btn_7,#btn_8,#btn_9,#btn_0,#btn_dot,#btn_equal,#btn_plus,#btn_minus,#btn_multiply,#btn_div{
+    width:16%;
+    height:5%;
+    background-color: var(--light_btn);
+    margin:auto;
+    margin-top: 6%;
+    text-align: center;
+    padding: 5px;
+    font-size: 5vh;
+    font-family: "Calisto MT", Courier, monospace;
+    font-weight: bolder;
+    text-shadow: 2px 2px 5px var(--light_textshadow);
+    cursor: pointer;
+    border-radius: 20px;
+    color:var(--light_textcolor);
+    box-shadow: 2px 1px 10px var(--light_btnboxshadow);
+}
+
+.switch5{
+    display: flex;
+    justify-content: space-between;
+    width: 98%;
+}
+
+#btn_clear,#btn_clearall{
+    width:40%;
+    height:5%;
+    background-color: var(--light_btn);
+    margin:auto;
+    margin-top: 6%;
+    text-align: center;
+    padding: 5px;
+    font-size: 5vh;
+    cursor: pointer;
+    margin-bottom: 6%;
+    border-radius: 20px;
+    color:var(--light_textcolor);
+    box-shadow: 2px 1px 10px var(--light_btnboxshadow);
+    font-family: "Calisto MT", Courier, monospace;
+    font-weight: bolder;
+    text-shadow: 2px 2px 5px var(--light_textshadow);
+}
+/* ------------------------------------information button---------------------------- */
+#icon{
+    width:auto;
+    height:auto;
+    position: absolute;
+    margin-left: 2%;
+    border-radius: 50%;
+    padding:0.05%;
+    box-shadow: 2px 2px 20px var(--light_infobtnshadow);
+    border:2px solid var(--light_infobtnshadow);
+    color:var(--light_infobtn );
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+#icon:hover{
+    box-shadow: 2px 2px 20px var(--dark_infobtnshadow);
+    border:2px solid var(--dark_infobtnshadow);
+    color:var(--dark_infobtn);
+}
+
+
+
+
+/*---------------------------day night mode ---------------------------*/
+
+.daynight{
+    box-sizing: border-box;
+    margin-left: 90%;
+    margin-top: 2%;
+}
+
+#mode_text{
+    margin-left: 88.5%;
+    font-family: Aboreto; 
+    font-weight: bolder;
+    font-size:12px; 
+    color:var( --light_modetext);
+}
+
+
+
+.checkbox{
+    opacity:0;
+    position: absolute;
+}
+
+.label{
+    width:50px;
+    height:26px;
+    background-color: #111;
+    display: flex;
+    border-radius: 50px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    position:relative;
+}
+
+.ball{
+    width:32px;
+    height:32px;
+    background-color: aliceblue;
+    position:absolute;
+    top:2px;
+    left:2px;
+    border-radius: 50%;
+    transition: transform 0.2s linear;
+}
+
+
+.checkbox:checked + .label .ball{
+    transform: translateX(24px);
+}
+
+#day{
+color: pink;
+}
+
+#night{
+    color:yellow;
+}
+
+
+/*-------------------------------responsive-------------------------------*/
+
+
+@media screen and (min-width:60px) and (max-width:200px) {
+
+    .calculator_body{
+        width:95%;
+    }
+    .daynight{
+        box-sizing: border-box;
+        margin-left: 70%;
+        margin-top: 3%;
+    }
+    #mode_text{
+        margin-left: 65%;
+        font-family: Aboreto; 
+        font-weight: bolder;
+        font-size:12px; 
+    }
+    #displaybox {
+        font-size:1.1vh; 
+    }
+    #btn_1,#btn_2,#btn_3,#btn_4,#btn_5,#btn_6,#btn_7,#btn_8,#btn_9,#btn_0,#btn_dot,#btn_equal,#btn_plus,#btn_minus,#btn_multiply,#btn_div,#btn_clear,#btn_clearall{
+    
+        font-size: 10px;
+    }
+}
+
+
+
+@media screen and (min-width:200px) and (max-width:650px) {
+
+    .calculator_body{
+        width:70%;
+        /* margin-top: 40%; */
+    }
+    .daynight{
+        box-sizing: border-box;
+        margin-left: 70%;
+        margin-top: 3%;
+    }
+    #mode_text{
+        margin-left: 65%;
+        font-family: Aboreto; 
+        font-weight: bolder;
+        font-size:12px; 
+    }
+    #displaybox {
+        font-size:2vh; 
+    }
+    #btn_1,#btn_2,#btn_3,#btn_4,#btn_5,#btn_6,#btn_7,#btn_8,#btn_9,#btn_0,#btn_dot,#btn_equal,#btn_plus,#btn_minus,#btn_multiply,#btn_div,#btn_clear,#btn_clearall{
+    
+        font-size: 125%;
+    }
+
+}
+
+
+
+@media screen and (min-width:650px) and (max-width:960px) {
+
+    .calculator_body{
+        width:35%;
+    }
+    .daynight{
+        box-sizing: border-box;
+        margin-left: 90%;
+        margin-top: 5%;
+    }
+    #mode_text{
+        margin-left: 88.5%;
+        font-family: Aboreto; 
+        font-weight: bolder;
+        font-size:12px; 
+    }
+    #displaybox {
+        font-size:3vh; 
+        
+    }
+}
+
+@media screen and (min-width:960px) and (max-width:1260px) {
+    #displaybox {
+        font-size:3.2vh; 
+    }
+    #btn_1,#btn_2,#btn_3,#btn_4,#btn_5,#btn_6,#btn_7,#btn_8,#btn_9,#btn_0,#btn_dot,#btn_equal,#btn_plus,#btn_minus,#btn_multiply,#btn_div,#btn_clear,#btn_clearall{
+    
+        font-size: 155%;
+    }
+}
+
